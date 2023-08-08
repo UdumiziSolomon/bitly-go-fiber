@@ -12,7 +12,7 @@ nodemon --exec go run main.go --signal SIGTERM
 ### Endpoints
 ``` golang
 router.Get("/goly",GetGollies)             // all golinks
-      .Get("/goly", GetGoly)               // single golink
+      .Get("/goly/:id", GetGoly)           // single golink
       .Post("/goly", CreateGoly)           // create golink
       .Patch("/goly", UpdateGoly)          // update golink
       .Delete("/goly/:id", DeletaGoly)     // delete single golink
